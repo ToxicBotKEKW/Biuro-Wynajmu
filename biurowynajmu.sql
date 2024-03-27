@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sty 18, 2024 at 04:18 PM
+-- Generation Time: Mar 27, 2024 at 04:43 PM
 -- Wersja serwera: 10.4.32-MariaDB
 -- Wersja PHP: 8.2.12
 
@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 -- Database: `biurowynajmu`
 CREATE DATABASE IF NOT EXISTS `biurowynajmu` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `biurowynajmu`;
+--
 --
 
 -- --------------------------------------------------------
@@ -75,7 +76,8 @@ INSERT INTO `adresy` (`ID_Adres`, `Kod_Pocztowy`, `Miasto`, `Ulica`, `Numer_Budy
 (44, '17-017', 'Rzeszów', 'Rynek', '33', '34', '2024-01-03 19:25:04'),
 (45, '18-018', 'Gliwice', 'ul. Zwycięstwa', '35', '36', '2024-01-03 19:25:04'),
 (46, '19-019', 'Zabrze', 'Plac Teatralny', '37', '38', '2024-01-03 19:25:04'),
-(47, '20-020', 'Olsztyn', 'ul. Mickiewicza', '39', '40', '2024-01-03 19:25:04');
+(47, '20-020', 'Olsztyn', 'ul. Mickiewicza', '39', '40', '2024-01-03 19:25:04'),
+(48, '00-000', 'admin', 'admin', '00', '00', '2024-03-27 15:36:49');
 
 -- --------------------------------------------------------
 
@@ -359,7 +361,8 @@ INSERT INTO `uzytkownicy` (`ID_Uzytkownika`, `Email`, `Haslo`, `Imie`, `Nazwisko
 (3, 'jan.kowalski@example.com', '$2y$10$I0Rk/oRRlblbLh5Wb1MCiOPse0ZprfA9DHjmHBMHu0K2.wKtkivq2', 'Jan', 'Kowalski', '1990-01-02', '123456789', 17, 5000.00, 99865399.99, 2, '2024-01-04 20:37:56', '2024-01-04 17:01:52'),
 (4, 'anna.nowak@example.com', '$2y$10$I0Rk/oRRlblbLh5Wb1MCiOPse0ZprfA9DHjmHBMHu0K2.wKtkivq2', 'Anna', 'Nowak', '1985-05-22', '987654321', 2, 6000.00, 1500.00, 2, '2024-01-04 20:37:56', '2023-12-28 21:24:18'),
 (17, 'kubabonda@o2.pl', '$2y$10$I0Rk/oRRlblbLh5Wb1MCiOPse0ZprfA9DHjmHBMHu0K2.wKtkivq2', 'Jakub', 'Bonda', '2023-12-14', '507433691', 14, 2000.00, 10000.00, 3, '2024-01-04 20:37:56', '2024-01-14 18:17:27'),
-(18, 'kubabonda1@o2.pl', '$2y$10$9yA5c6jSV9AX20Z1Xze.YecN3nM7VtRzUs2BVm7XxSb5JwTxre2bi', 'Jakub', 'Bonda', '1992-11-13', '507433691', 2, 2000.00, 123113.00, 2, '2024-01-04 20:37:56', '2024-01-03 19:27:22');
+(18, 'kubabonda1@o2.pl', '$2y$10$9yA5c6jSV9AX20Z1Xze.YecN3nM7VtRzUs2BVm7XxSb5JwTxre2bi', 'Jakub', 'Bonda', '1992-11-13', '507433691', 2, 2000.00, 123113.00, 2, '2024-01-04 20:37:56', '2024-01-03 19:27:22'),
+(23, 'admin@wp.pl', '$2y$10$DE79VDlymwEyjAR.utptouurzve4y0JMLyVAgKWFRhqEtDXe1ri4y', 'admin', 'admin', '2024-03-27', '000000000', 48, 10000.00, NULL, 1, '2024-03-27 15:36:49', '2024-03-27 15:36:49');
 
 -- --------------------------------------------------------
 
@@ -556,7 +559,7 @@ ALTER TABLE `zgloszenia_serwisowe`
 -- AUTO_INCREMENT for table `adresy`
 --
 ALTER TABLE `adresy`
-  MODIFY `ID_Adres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `ID_Adres` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `dostepnosc_lokalu`
@@ -610,7 +613,7 @@ ALTER TABLE `tranzakcje`
 -- AUTO_INCREMENT for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `ID_Uzytkownika` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID_Uzytkownika` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `wnioski`
