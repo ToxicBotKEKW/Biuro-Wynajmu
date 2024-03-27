@@ -1,0 +1,266 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	background-color: rgb(30, 34, 41);
+}
+
+/*
+
+HEADER
+
+*/
+
+header {
+
+}
+
+
+header #navbarLeft{
+	position: fixed;
+	width: 100px;
+	min-height: 100vh;
+	border-right: 1px solid white;
+	z-index: 2;
+	background-color: rgb(30, 34, 41);
+}
+
+header #navbarLeft a{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.4);
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid white;
+	text-decoration: none;
+}
+
+header #navbarLeft a:hover{
+	background-color: rgba(0,0,0,0.2);
+	border-right: 1px solid darkgoldenrod;
+}
+
+header #navbarLeft .activeLink{
+	border-right: 1px solid darkgoldenrod;
+}
+  
+  header .navbar {
+	overflow: hidden;
+	width: 1200px;
+	margin: auto;
+	display: none;
+  }
+  
+  header .navbar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .dropdown {
+	margin-right: auto;
+	overflow: hidden;
+  }
+
+  
+  header .dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	background-color: rgb(30, 34, 41);
+	font-family: inherit;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .navbar a:hover, .dropdown:hover .dropbtn {
+	color: darkgoldenrod;
+  }
+  
+  header .dropdown-content {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: rgba(30, 34, 41, 0.5);
+	width: 100%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  header .dropdown-content a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+  }
+  
+  header .dropdown-content a:hover {
+	background-color: rgba(30, 34, 41, 0.7);
+  }
+  
+  header .dropdown:hover .dropdown-content {
+	display: flex;
+  }
+
+/*
+
+SECTION
+
+*/
+
+section{
+	min-height: 1000px;
+	z-index: 2;
+}
+
+/*
+
+ARTICLE
+
+*/
+
+article{
+	min-height: 1000px;
+	display: flex;
+	margin-left: 100px;
+	justify-content: center;
+}
+
+
+article #PanelDaneDaneUzytkownika{
+    display: flex;
+    flex-wrap: nowrap;
+    color: white;
+	padding-left: 15px;
+	flex-direction: column;
+	width: 100%;
+}
+
+
+article #PanelDaneDaneUzytkownika h1{
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	margin: 25px;
+}
+
+article #PanelDaneDaneUzytkownika p{
+	font-size: 20px;
+}
+article #PanelDaneDaneUzytkownika p a{
+	text-decoration: none;
+	color: white;
+}
+article #PanelDaneDaneUzytkownika p a:hover{
+	color: darkgoldenrod;
+}
+
+article #PanelDaneDaneUzytkownika #coZWnioskiem{
+	display: flex;
+}
+article #PanelDaneDaneUzytkownika #coZWnioskiem form input[type=submit]{
+	display: flex;
+	text-decoration: none;
+	min-width: 120px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 50px;
+	border: 1px solid white;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background-color: rgba(0,0,0,0.2);
+	float: left;
+	margin: 1px;
+}
+
+article #PanelDaneDaneUzytkownika #coZWnioskiem form input[type=submit]:hover{
+	background-color: rgba(0,0,0,0.4);
+	cursor: pointer;
+}
+
+
+
+/*
+
+ARTICLE
+
+*/
+
+footer{
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid white;
+	background-color: rgb(30, 34, 41);
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	z-index: 2;
+}
+
+footer h1{
+	text-align: 35px;
+	font-weight: bold;
+	color: white;
+}
+
+
+@media (max-width: 1200px) {
+	header .navbar{
+		width: 100%;
+	}
+	article{
+		width: 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	header{
+		position: fixed;
+		top: 0;
+		margin: 0;
+		width: 100%;
+		height: 80px;
+		border-bottom: 1px solid white;
+		background-color: rgb(30, 34, 41);
+		display: flex;
+		z-index: 2;
+	}
+	header .navbar{
+		display:flex;
+	}
+	article{
+		margin-left: 0px;
+		margin-top: 100px;
+	}
+	section{
+		margin-top: 100px;
+	}
+	#navbarLeft{
+		display: none;
+	}
+
+	
+}

@@ -1,0 +1,331 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	background-color: rgb(30, 34, 41);
+}
+
+/*
+
+HEADER
+
+*/
+
+header {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid white;
+	background-color: rgb(30, 34, 41);
+
+	z-index: 2;
+  }
+  
+  header .navbar {
+	overflow: hidden;
+	background-color: rgb(30, 34, 41);
+	width: 1200px;
+	margin: auto;
+	display: flex;
+  }
+  
+  header .navbar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .dropdown {
+	margin-left: auto;
+	overflow: hidden;
+  }
+
+  
+  header .dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	background-color: rgb(30, 34, 41);
+	font-family: inherit;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .navbar a:hover, .dropdown:hover .dropbtn {
+	color: darkgoldenrod;
+  }
+  
+  header .dropdown-content {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: rgba(30, 34, 41, 0.5);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  header .dropdown-content a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+  }
+  
+  header .dropdown-content a:hover {
+	background-color: rgba(30, 34, 41, 0.7);
+  }
+  
+  header .dropdown:hover .dropdown-content {
+	display: flex;
+  }
+
+/*
+
+SECTION
+
+*/
+
+section{
+	margin-top: 100px;
+	min-height: 1000px;
+	z-index: 2;
+}
+
+/*
+
+ARTICLE
+
+*/
+
+article{
+	width: 1200px;
+	margin: auto;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	align-items: center;
+	color: white;
+	justify-content: space-between;
+}
+
+article h1{
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	margin: 5px;
+}
+
+article #wyszukiwanie{
+	display: flex;
+    max-width: 900px;
+}
+
+article #wyszukiwanie form{
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+article #wyszukiwanie form input{
+	margin: 2px;
+}
+
+article #wyszukiwanie form input[type=text], input[type=number], input[type=date], input[type=password]{
+	display: flex;
+	font-size: 15px;
+	height: 38px;
+	padding: 2px;
+	padding-left: 5px;
+	max-width: 200px;
+	border: 1px solid white;
+	border-radius: 8px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+	align-items: center;
+	justify-content: center;
+}
+
+article #wyszukiwanie form input[type=text]:focus, input[type=number]:focus, input[type=date]:focus, input[type=password]:focus{
+	border-color:#6e8095;
+	outline: none; 
+}
+
+article #wyszukiwanie form input[type=submit]{
+	display: flex;
+	color: #FFF;
+	outline: 0;
+	max-width: 200px;
+	height: 44px;
+	font-size: 16px;
+	text-align: center; 
+	border: 1px solid white;
+	border-radius: 8px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+	transition-duration: 0.4s;
+	align-items: center;
+	justify-content: center;
+}
+
+article #wyszukiwanie form input[type=submit]:hover {
+	color: white;
+    background: rgb(32, 46, 65);
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+article #lokale{
+	min-height: 1200px;
+}
+
+
+article #lokale .daneLokalu{
+	display: flex;
+    width: 900px;
+    height: 200px;
+    margin: 25px;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    transition: 500ms;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+article #lokale .daneLokalu h1{
+	text-align: left;
+}
+
+article #lokale a{
+	text-decoration: none;
+}
+
+article #lokale .daneLokalu:hover{
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px #fff, 0 0 10px #fff, 0px 0px 20px #fff;
+	cursor: pointer;
+	z-index: 1;
+}
+
+article #lokale .daneLokalu h2{
+	color: white;
+}
+
+article #lokale .daneLokalu p{
+	color: white;
+	font-size: 17px;
+}
+
+article #lokale .daneLokaluLewo img{
+	width: 196px;
+	height: 196px;
+	margin: 2px;
+	border-radius: 20px;
+}
+
+article #lokale .daneLokaluPrawo{
+	width: 100vh;
+}
+
+article #lokale .daneLokaluPrawo .nazwaLokalu{
+	display: flex;
+	justify-content: space-between;
+}
+article #lokale .daneLokaluPrawo .nazwaLokalu .cenaWynajmuLokalu{
+	display: flex;
+	align-items: center;
+	color: white;
+	text-decoration: none;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	border-radius: 6px;
+}
+
+article #stronnicowanie{
+	display: flex;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+
+article #stronnicowanie a{
+	display: flex;
+	text-decoration: none;
+	min-width: 50px;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,0.2);
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+article #stronnicowanie a:hover{
+	background-color: rgba(0,0,0,0.4);
+}
+
+/*
+
+ARTICLE
+
+*/
+
+footer{
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid white;
+	background-color: rgb(30, 34, 41);
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	z-index: 2;
+}
+
+footer h1{
+	text-align: 35px;
+	font-weight: bold;
+	color: white;
+}
+
+
+@media (max-width: 1200px) {
+	article #lokale .daneLokalu{
+		width: 90%;
+		margin: 10px;
+	}
+	header .navbar{
+		width: 90%;
+	}
+	article{
+		width: 100%;
+	}
+}

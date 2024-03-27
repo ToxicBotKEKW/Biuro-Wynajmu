@@ -1,0 +1,23 @@
+USE world;
+
+SHOW tables;
+
+SELECT (SELECT COUNT(*) FROM world.country), (SELECT COUNT(*) FROM world.city), (SELECT COUNT(*) FROM world.countrylanguage);
+
+SELECT countr.Name FROM (SELECT Name, Population FROM world.country WHERE name LIKE '____') AS countr ORDER BY countr.Population DESC LIMIT 1;
+
+SELECT Name, Population FROM country WHERE (Population, Region) = (SELECT Max(Population), Region FROM country WHERE Region LIKE 'Caribbean' AND Name LIKE '____');
+
+SELECT Name, Continent, Population FROM country WHERE (Continent, Population) IN (SELECT Continent,  MAX(Population) FROM country GROUP BY Continent) ORDER BY Continent;
+
+SELECT Name,Population FROM country WHERE Continent LIKE 'Europe' AND Population > ANY(SELECT Population FROM country WHERE Continent LIKE 'Asia');
+
+SELECT Name,Population FROM country WHERE Continent LIKE 'Europe' AND  Population > ALL(SELECT Population FROM country WHERE Continent LIKE 'Asia');
+
+SELECT Continent, COUNT(Name) FROM country GROUP BY Continent HAVING COUNT(Name) > (SELECT COUNT(Name) FROM country WHERE Continent LIKE 'Europe' GROUP BY Continent);
+
+SELECT Name, Population, (SELECT AVG(Population) FROM country) AS Średnia,  ABS((SELECT AVG(Population) FROM country) - Population) AS Różnica  FROM country WHERE Name LIKE '____' GROUP BY Name;
+
+SELECT Name, Population, (SELECT AVG(Population) FROM country WHERE Continent = (SELECT Continent FROM country WHERE Name = 'Poland')) AS Śrenia FROM country WHERE Name = 'Poland';
+
+SELECT c.Region, c.Name, c.Population FROM country c WHERE Continent = 'Africa' GROUP BY Region, Name HAVING (Region,Population) = (SELECT Region, MAX(Population) FROM country WHERE Continent = 'Africa' AND Region = c.Region GROUP BY Region);

@@ -1,0 +1,150 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	background-color: rgb(30, 34, 41);
+}
+
+/*
+
+HEADER
+
+*/
+
+header {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 2;
+	display: flex;
+}
+
+header a{
+	margin: 5px;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+
+header a:hover{
+	color: darkgoldenrod;
+}
+ 
+
+/*
+
+SECTION
+
+*/
+
+section{
+	margin-top: 50px;
+	z-index: 2;
+	height: 100%;
+}
+
+/*
+
+ARTICLE
+
+*/
+
+article{
+	width: 1000px;
+	height: 100%;
+	margin: auto;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	color: white;
+	align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+article form{
+	margin: 15% auto;
+	width: 300px;
+	padding: 30px 25px;
+    background-color: rgb(30, 34, 41);
+	color: white;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.75);
+}
+
+article form input{
+	margin-top: 5px;
+	margin-bottom: 8px;
+}
+
+article form input[type=text], input[type=number], input[type=date], input[type=password]{
+	font-size: 15px;
+	margin-bottom: 15px;
+	height: 25px;
+	width: calc(100% - 23px);
+	border: 1px solid white;
+	border-radius: 8px;
+    padding: 8.4px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+}
+
+article form input[type=text]:focus, input[type=number]:focus, input[type=date]:focus, input[type=password]:focus{
+	border-color:#6e8095;
+	outline: none; 
+}
+
+article form input[type=submit]{
+	color: #FFF;
+	outline: 0;
+	width: 100%;
+	height: 50px;
+	font-size: 16px;
+	text-align: center; 
+	border: 1px solid white;
+	border-radius: 8px;
+    padding: 8.4px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+	transition-duration: 0.4s;
+}
+
+article form input[type=submit]:hover {
+	color: white;
+    background: rgb(32, 46, 65);
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+article h1{
+	text-align: center;
+	font-size: 30px;
+	margin: 5px;
+	margin-bottom: 20px;
+}
+
+
+
+/*
+
+ARTICLE
+
+*/
+
+footer{
+
+}
+
+
+
+@media (max-width: 1000px) {
+	header .navbar{
+		width: 90%;
+	}
+	article{
+		width: 100%;
+	}
+}

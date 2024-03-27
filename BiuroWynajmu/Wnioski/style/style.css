@@ -1,0 +1,249 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	background-color: rgb(30, 34, 41);
+}
+
+/*
+
+HEADER
+
+*/
+
+header {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid white;
+	background-color: rgb(30, 34, 41);
+
+	z-index: 2;
+  }
+  
+  header .navbar {
+	overflow: hidden;
+	background-color: rgb(30, 34, 41);
+	width: 1200px;
+	margin: auto;
+	display: flex;
+  }
+  
+  header .navbar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .dropdown {
+	margin-left: auto;
+	overflow: hidden;
+  }
+
+  
+  header .dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	background-color: rgb(30, 34, 41);
+	font-family: inherit;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .navbar a:hover, .dropdown:hover .dropbtn {
+	color: darkgoldenrod;
+  }
+  
+  header .dropdown-content {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: rgba(30, 34, 41, 0.5);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  header .dropdown-content a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+  }
+  
+  header .dropdown-content a:hover {
+	background-color: rgba(30, 34, 41, 0.7);
+  }
+  
+  header .dropdown:hover .dropdown-content {
+	display: flex;
+  }
+
+/*
+
+SECTION
+
+*/
+
+section{
+	margin-top: 100px;
+	min-height: 1000px;
+	z-index: 2;
+}
+
+/*
+
+ARTICLE
+
+*/
+
+article{
+	width: 1200px;
+	margin: auto;
+	display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+	color: white;
+	justify-content: space-between;
+}
+
+article h1{
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	margin: 5px;
+}
+
+article #wnioski{
+	display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+article #wnioski .typWniosku{
+	display: flex;
+	border: 2px solid white;
+	border-radius: 3px;
+	transition: 500ms;
+	background-color: rgb(30, 34, 41);
+	width: 400px;
+	flex-direction: column;
+    align-items: center;
+	margin: 10px;
+	min-height: 400px;
+}
+
+article #wnioski .typWniosku:hover{
+	transform: scale(1.02);
+    box-shadow: 0 0 0 3px #fff, 0 0 10px #fff, 0px 0px 20px #fff;
+	z-index: 1;
+}
+
+article #wnioski .typWniosku .typWnioskuNazwa{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	width: 100%;
+	height: 50px;
+}
+article #wnioski .typWniosku .typWnioskuOpis{
+	display: flex;
+	width: 100%;
+	height: 300px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+article #wnioski .typWniosku .typWnioskuOpis p{
+	margin: 10px;
+}
+article #wnioski .typWniosku .typWnioskuLink{
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	width: 100%;
+	height: 50px;
+}
+
+article #wnioski .typWniosku .typWnioskuLink a{
+	display: flex;
+	text-decoration: none;
+	min-width: 50px;
+	height: 45px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border: 1px solid white;
+	background-color: rgba(0,0,0,0.2);
+	margin-left: 2px;
+	margin-right: 2px;
+	transition: 500ms;
+}
+
+article #wnioski .typWniosku .typWnioskuLink a:hover{
+	background-color: rgba(0,0,0,0.4);
+}
+
+/*
+
+ARTICLE
+
+*/
+
+footer{
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid white;
+	background-color: rgb(30, 34, 41);
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	z-index: 2;
+}
+
+footer h1{
+	text-align: 35px;
+	font-weight: bold;
+	color: white;
+}
+
+
+@media (max-width: 1200px) {
+	article #lokale .daneLokalu{
+		width: 90%;
+		margin: 10px;
+	}
+	header .navbar{
+		width: 90%;
+	}
+	article{
+		width: 100%;
+	}
+}

@@ -1,0 +1,259 @@
+html, body{
+    margin: 0;
+	padding: 0;
+	background-color: rgb(30, 34, 41);
+}
+
+/*
+
+HEADER
+
+*/
+
+header {
+	position: fixed;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid white;
+	background-color: rgb(30, 34, 41);
+
+	z-index: 2;
+  }
+  
+  header .navbar {
+	overflow: hidden;
+	background-color: rgb(30, 34, 41);
+	width: 1200px;
+	margin: auto;
+	display: flex;
+  }
+  
+  header .navbar a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .dropdown {
+	margin-left: auto;
+	overflow: hidden;
+  }
+
+  
+  header .dropdown .dropbtn {
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	color: white;
+	min-width: 100px;
+	height: 80px;
+	background-color: rgb(30, 34, 41);
+	font-family: inherit;
+	margin: 0;
+	font-weight: bold;
+	font-size: 20px;
+  }
+  
+  header .navbar a:hover, .dropdown:hover .dropbtn {
+	color: darkgoldenrod;
+  }
+  
+  header .dropdown-content {
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	background-color: rgba(30, 34, 41, 0.5);
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  header .dropdown-content a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: white;
+	min-width: 100px;
+	height: 40px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+	border-left: 1px solid white;
+  }
+  
+  header .dropdown-content a:hover {
+	background-color: rgba(30, 34, 41, 0.7);
+  }
+  
+  header .dropdown:hover .dropdown-content {
+	display: flex;
+  }
+
+/*
+
+SECTION
+
+*/
+
+section{
+	margin-top: 100px;
+	min-height: 1000px;
+	z-index: 2;
+}
+
+/*
+
+ARTICLE
+
+*/
+
+article{
+	width: 1200px;
+    margin: auto;
+	display: flex;
+}
+
+article #PanelDaneOdnosniki{
+	width: 100px;
+	border-right: 1px solid white;
+}
+
+article #PanelDaneOdnosniki a{
+	display: flex;
+	width: 100px;
+	height: 100px;
+	background-color: rgba(0,0,0,0.4);
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid white;
+	text-decoration: none;
+}
+
+article #PanelDaneOdnosniki a:hover{
+	background-color: rgba(0,0,0,0.2);
+	border-right: 1px solid darkgoldenrod;
+}
+
+article #PanelDaneOdnosniki .activeLink{
+	border-right: 1px solid darkgoldenrod;
+}
+
+article #PanelDaneDaneUzytkownika{
+	max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    flex-direction: column;
+	padding-left: 5px;
+}
+
+article #PanelDaneDaneUzytkownika h1{
+	font-size: 35px;
+	font-weight: bold;
+	color: white;
+	margin: 5px;
+}
+
+
+article #PanelDaneDaneUzytkownika form{
+	display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+	padding: 10px 25px;
+	color: white;
+	font-size: 20px;
+}
+
+
+article #PanelDaneDaneUzytkownika form input[type=text], input[type=email], input[type=number], input[type=date], input[type=password]{
+	font-size: 15px;
+	margin-bottom: 17px;
+	margin-top: 3px;
+	height: 25px;
+	width: 200px;
+	border: 1px solid white;
+	border-radius: 8px;
+    padding: 8.4px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+}
+
+article #PanelDaneDaneUzytkownika form input[type=text]:focus, input[type=number]:focus, input[type=date]:focus, input[type=password]:focus{
+	border-color:#6e8095;
+	outline: none; 
+}
+
+article #PanelDaneDaneUzytkownika form input[type=submit]{
+	color: #FFF;
+	outline: 0;
+	width: 200px;
+	height: 50px;
+	font-size: 16px;
+	margin-bottom: 7px;
+	margin-top: 3px;
+	text-align: center; 
+	border: 1px solid white;
+	border-radius: 8px;
+    padding: 8.4px;
+    color: rgb(167, 175, 190);
+    caret-color: rgb(167, 175, 190);
+    background: rgb(39, 44, 53);
+	transition-duration: 0.4s;
+}
+
+article #PanelDaneDaneUzytkownika form input[type=submit]:hover {
+	color: white;
+    background: rgb(32, 46, 65);
+	cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+
+
+/*
+
+ARTICLE
+
+*/
+
+footer{
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid white;
+	background-color: rgb(30, 34, 41);
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+	z-index: 2;
+}
+
+footer h1{
+	text-align: 35px;
+	font-weight: bold;
+	color: white;
+}
+
+
+@media (max-width: 1200px) {
+	header .navbar{
+		width: 90%;
+	}
+	article{
+		width: 100%;
+	}
+}
